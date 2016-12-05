@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_garage_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.victo.cst2335_finalproject.GarageFragment"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/garage_door_heading"
+        android:text="@string/garage_door_heading"
+        android:theme="@style/HeadingText"
+        android:layout_marginBottom="20dp" />
+
+    <ToggleButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/toggleGarageDoor"
+        android:textOff="@string/garage_door_closed"
+        android:textOn="@string/garage_door_open"
+        android:background="@drawable/toggle_selector"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/garage_light_heading"
+        android:text="@string/garage_light_heading"
+        android:theme="@style/HeadingText"
+        android:layout_marginBottom="20dp" />
+
+    <ToggleButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/toggleGarageLight"
+        android:textOff="@string/garage_light_off"
+        android:textOn="@string/garage_light_on"
+        android:background="@drawable/toggle_selector"
+        android:gravity="center"/>
+
+</LinearLayout>
+

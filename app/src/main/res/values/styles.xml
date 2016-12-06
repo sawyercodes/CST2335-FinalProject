@@ -6,7 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -14,15 +16,23 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="ListView">
-        <item name="android:textSize">24dp</item>
+    <style name="HeadingText" parent="AppTheme">
+        <item name="android:textSize">32dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
-    <style name="HeadingText">
-        <item name="android:textSize">36dp</item>
+    <style name="SubheadingText" parent="AppTheme">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="Button" parent="AppTheme">
+        <item name="android:textSize">28dp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/textColorPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/toggle_text</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

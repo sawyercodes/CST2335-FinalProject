@@ -13,9 +13,14 @@
     tools:context="com.example.victo.cst2335_finalproject.HouseSettingsFragments"
     tools:showIn="@layout/activity_house_settings_fragments">
 
-    <!--<FrameLayout
-        android:id="@+id/house_settings_fragments"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>-->
+    <!--<FrameLayout-->
+        <!--android:id="@+id/house_settings_fragments_frame"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/house_settings_fragments_container"/>
 
 </RelativeLayout>

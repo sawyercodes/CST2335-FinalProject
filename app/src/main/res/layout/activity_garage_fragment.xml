@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.victo.cst2335_finalproject.GarageFragment"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center">
 
     <TextView
         android:layout_width="match_parent"
@@ -18,15 +18,18 @@
         android:id="@+id/garage_door_heading"
         android:text="@string/garage_door_heading"
         android:theme="@style/HeadingText"
-        android:layout_marginBottom="20dp" />
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
 
     <ToggleButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/toggleGarageDoor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/toggle_garage_door"
         android:textOff="@string/garage_door_closed"
         android:textOn="@string/garage_door_open"
         android:background="@drawable/toggle_selector"
+        android:theme="@style/Button"
         android:layout_marginBottom="20dp"
         android:gravity="center"/>
 
@@ -36,15 +39,18 @@
         android:id="@+id/garage_light_heading"
         android:text="@string/garage_light_heading"
         android:theme="@style/HeadingText"
-        android:layout_marginBottom="20dp" />
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
 
     <ToggleButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/toggleGarageLight"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/toggle_garage_light"
         android:textOff="@string/garage_light_off"
         android:textOn="@string/garage_light_on"
         android:background="@drawable/toggle_selector"
+        android:theme="@style/Button"
         android:gravity="center"/>
 
 </LinearLayout>

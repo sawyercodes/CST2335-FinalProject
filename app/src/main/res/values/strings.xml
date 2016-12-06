@@ -13,4 +13,12 @@
     <string name="garage_light_heading">Garage Light</string>
     <string name="garage_light_off">Turn On</string>
     <string name="garage_light_on">Turn Off</string>
+    <string name="house_settings_activity_name">House Settings</string>
+    <string name="title_garage_fragment">Garage</string>
+    <string name="house_temp_schedule_heading">Schedule</string>
+    <string name="house_temp_heading">Temperature</string>
+    <string name="title_house_temp_fragment">House Temperature</string>
+    <string name="house_temp_degrees">\\u2103 Celcius</string>
+    <string name="title_weather_fragment">Weather</string>
+    <string name="edit_temp_schedule">Edit</string>
 </resources>

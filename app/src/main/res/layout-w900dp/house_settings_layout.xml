@@ -33,7 +33,7 @@
     </RelativeLayout>
 
     <FrameLayout
-        android:id="@+id/house_settings_fragments_frame"
+        android:id="@+id/house_settings_layout_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

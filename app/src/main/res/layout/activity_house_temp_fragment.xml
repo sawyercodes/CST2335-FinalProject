@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_house_temp_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.victo.cst2335_finalproject.HouseTempFragment"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/garage_door_heading"
+        android:text="@string/house_temp_heading"
+        android:theme="@style/HeadingText"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/house_temp_number_picker"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="@string/house_temp_degrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/house_temp_degrees"
+            android:layout_weight="1"
+            android:theme="@style/SubheadingText"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/garage_light_heading"
+        android:text="@string/house_temp_schedule_heading"
+        android:theme="@style/HeadingText"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:text="@string/edit_temp_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_temp_schdule" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/house_temp_listview"/>
+    </ScrollView>
+
+</LinearLayout>
+

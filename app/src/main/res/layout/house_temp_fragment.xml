@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.victo.cst2335_finalproject.HouseTempFragment"
     android:orientation="vertical"
-    android:layout_gravity="center">
+    android:gravity="center">
 
     <TextView
         android:layout_width="match_parent"
@@ -22,26 +22,22 @@
         android:layout_marginBottom="20dp"
         />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_height="100dp">
 
         <NumberPicker
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/house_temp_number_picker"
-            android:layout_weight="1" />
-
-        <TextView
-            android:text="@string/house_temp_degrees"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/house_temp_degrees"
             android:layout_weight="1"
-            android:theme="@style/SubheadingText"
-            android:gravity="center"/>
-    </LinearLayout>
+            android:gravity="center_horizontal"
+            />
+
+    </FrameLayout>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -53,25 +49,43 @@
         android:layout_marginBottom="20dp"
         />
 
-    <Button
-        android:text="@string/edit_temp_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_temp_schdule" />
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
-        <!--<LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:text="@string/edit_temp_schedule"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />-->
+            android:id="@+id/edit_temp_schdule"
+            android:theme="@style/Button"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:text="@string/delete_temp_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_temp_schdule"
+            android:theme="@style/Button"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp">-->
+
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/house_temp_listview"/>
+            android:id="@+id/house_temp_listview"
+            android:layout_height="150dp" />
+<!--
     </ScrollView>
+-->
 
 </LinearLayout>
 

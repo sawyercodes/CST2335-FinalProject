@@ -2,19 +2,24 @@ package com.example.victo.cst2335_finalproject;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class HouseSettings extends AppCompatActivity {
+//public class HouseSettings extends AppCompatActivity {
+public class HouseSettings extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,12 +82,44 @@ public class HouseSettings extends AppCompatActivity {
     }
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_house_settings, menu);
         return true;
+    }*/
+
+    //@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_help:
+                //HelpDialog.onCreateDialog(R.string.version_number, R.string.help_dialog_title_house_settings, R.string.help_dialog_message_house_settings, getBaseContext());
+
+               // String messageStr = String.format(this.getResources().getString(R.string.version_number),
+               //         this.getResources().getString(R.string.help_dialog_message_house_settings));
+                int version = R.string.version_number;
+                String versionStr = this.getResources().getString(version);
+                int message = R.string.help_dialog_message_house_settings;
+                String messageStr = String.format( this.getResources().getString(message),
+                        String.valueOf(versionStr));
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle(R.string.help_dialog_title_house_settings)
+                        .setMessage(Html.fromHtml(messageStr))
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                            }
+                        });
+                builder.show();
+                builder.create();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
+
 
     private ListView houseSettingsList;
     private GarageFragment garageFragment;
